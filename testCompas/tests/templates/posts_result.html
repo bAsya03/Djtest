@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <title>{{ unit_name }}</title>
+    <link rel = "stylesheet" href = "{% static 'css/task.css' %}">
+    <link rel = "shortcut icon" href = "{% static 'img/img_python.png' %}" type = "image/png">
+    <link rel = "stylesheet" type = "text/css" href = "//fonts.googleapis.com/css?family=Cabin"/>
+</head>
+<body>
+
+<div class = "header">
+    <a href = "https://comp-as.by" class = "logo">Comp-As</a>
+    <div class = "header-right">
+        <a href = "{% url 'index' %}">Главная</a>
+        <a href = "{% url 'theory' %}">Теория</a>
+        <a href = "{% url 'task' %}">Задачи</a>
+        <a href = "{% url 'test' %}">Тест</a>
+    </div>
+</div>
+<p class = "line2">{{ unit_name }}</p>
+<div class = "list">
+    <div class = "content2">
+        <h1 align = "center">{{ count }} / 10</h1>
+        {% for value in cor.values %}
+        <h3 style = "color: green; font-size: 14pt; font-style: Cabin;">{{ value }}</h3>
+        {% endfor %}
+        {% for value in nocor.values %}
+        <h3 style = "color: red; font-size: 14pt; text-style: Cabin;">{{ value }}</h3>
+        {% endfor %}
+    </div>
+</div>
+
+<div class = "list">
+    <a href = "{% url 'task' %}" class = "alist">
+        <div class = "content" style = "margin-top: 5%;">
+            <h1 align = "center">Вернуться</h1>
+        </div>
+    </a>
+</div>
+
+</body>
+</html>

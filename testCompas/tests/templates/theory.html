@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang = "en">
+<head>
+    <meta charset = "UTF-8">
+    <title>Теория</title>
+    <link rel = "stylesheet" href = "{% static 'css/theory.css' %}">
+    <link rel = "shortcut icon" href = "{% static 'img/img_python.png' %}" type = "image/png">
+    <link rel = "stylesheet" type = "text/css" href = "//fonts.googleapis.com/css?family=Cabin"/>
+</head>
+<body>
+
+<div class = "header">
+    <a href = "https://comp-as.by" class = "logo">Comp-As</a>
+    <div class = "header-right">
+        <a href = "{% url 'index' %}">Главная</a>
+        <a class = "active">Теория</a>
+        <a href = "{% url 'task' %}">Задачи</a>
+        <a href = "{% url 'test' %}">Тест</a>
+    </div>
+</div>
+
+
+</body>
+</html>
